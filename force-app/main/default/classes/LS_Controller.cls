@@ -13,7 +13,7 @@ public with sharing class LS_Controller {
             throw new AuraHandledException('Id is empty');
         }
         String output = '';          
-        String jsonStr = CFR_Controller.getItems();   //sr.Body.toString(); 
+        String jsonStr = LS_Controller.getItems();   //sr.Body.toString(); 
         List<Object> parsedResponse = (List<Object>) JSON.deserializeUntyped(jsonStr);
         for (Object finalObj : parsedResponse) {
             Map<String,Object> tempObjMap = (Map<String,Object>) finalObj;

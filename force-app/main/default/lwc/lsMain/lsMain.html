@@ -1,3 +1,27 @@
 <template>
-    
-</template>
+    <template if:true={hasError}>
+      <div class="app-error slds-notify_alert slds-theme_alert-texture slds-theme_warning">
+        {errorMessage}
+      </div>
+    </template>
+    <template if:false={hasError}>
+      <div class="application-wrap">
+        <template if:true={isLoading}>
+          <div class="application-loading"></div>
+        </template>
+  
+        <!-- <template if:true={modal}>
+          <c-cfr-modal onclosemodal={closeModal}></c-cfr-modal>
+        </template>  
+  
+        <template if:true={view.landing}>
+          <c-cfr-landing></c-cfr-landing>
+        </template>
+        <template if:true={view.itemDetail}>
+          <c-cfr-item-detail onshowmodal={showModal}></c-cfr-item-detail>
+        </template>
+   -->
+         
+      </div>
+    </template>
+  </template>

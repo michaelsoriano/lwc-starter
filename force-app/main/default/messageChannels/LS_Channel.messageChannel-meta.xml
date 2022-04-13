@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>LS Channel</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>Is Application Loading?</description>
+        <fieldName>isLoading</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>Is there an Error in the application?</description>
+        <fieldName>hasError</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>Which view is needed to show?</description>
+        <fieldName>view</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>Error message to be displayed</description>
+        <fieldName>errorMessage</fieldName>
+    </lightningMessageFields>
+    <masterLabel>LS_Channel</masterLabel>
+</LightningMessageChannel>
