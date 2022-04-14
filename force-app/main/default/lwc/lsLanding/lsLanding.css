@@ -1,0 +1,19 @@
+.grid-wrapper{   
+    max-width:1200px;
+    display: grid;     
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    grid-auto-rows: minmax(200px, auto);     
+    margin:0 auto;
+}
+@media(min-width:414px) and (max-width:767px){
+    .grid-wrapper{   
+        grid-template-columns: repeat(2, 1fr);            
+    }
+}
+
+@media(min-width:768px){
+    .grid-wrapper{   
+        grid-template-columns: repeat(3, 1fr);            
+    }
+}

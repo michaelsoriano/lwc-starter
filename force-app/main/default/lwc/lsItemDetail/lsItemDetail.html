@@ -1,0 +1,24 @@
+<template>
+    <div class="item-detail-wrapper">
+        <div class="item-detail card">
+            <h1>{item.title}</h1>
+            <img src={item.largeImage} alt={item.title} />
+            <div class="item-description">
+                {item.description}
+            </div>
+        </div>
+        <div class="item-sidebar card">
+            <h2>Sidebar</h2>
+            <lightning-button
+                onclick={showModal}
+                variant="brand-outline"
+                label="Launch Modal">
+            </lightning-button>
+        </div>
+        <lightning-button
+            onclick={backToLanding}
+            variant="brand-outline"
+            label="back to landing page">
+        </lightning-button>
+    </div>    
+</template>

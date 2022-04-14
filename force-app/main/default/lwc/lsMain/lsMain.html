@@ -10,17 +10,16 @@
           <div class="application-loading"></div>
         </template>
   
-        <!-- <template if:true={modal}>
-          <c-cfr-modal onclosemodal={closeModal}></c-cfr-modal>
-        </template>  
-  
+        <template if:true={modal}>
+          <c-ls-modal onclosemodal={closeModal}></c-ls-modal>
+        </template>    
         <template if:true={view.landing}>
-          <c-cfr-landing></c-cfr-landing>
+          <c-ls-landing></c-ls-landing>
         </template>
+         
         <template if:true={view.itemDetail}>
-          <c-cfr-item-detail onshowmodal={showModal}></c-cfr-item-detail>
-        </template>
-   -->
+          <c-ls-item-detail onshowmodal={showModal}></c-ls-item-detail>
+        </template>  
          
       </div>
     </template>

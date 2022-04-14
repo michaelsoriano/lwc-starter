@@ -1,0 +1,41 @@
+<template>
+    <section
+        role="dialog"
+        tabindex="-1"
+        aria-modal="true"
+        class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <lightning-button-icon
+                    class="slds-modal__close"
+                    title="Close"
+                    icon-name="utility:close"
+                    icon-class="slds-button_icon-inverse"
+                    onclick={closeModal}
+                ></lightning-button-icon>
+                <h2>A modal window with a form</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium">   
+                <lightning-textarea
+                    name="comments"
+                    class="input-comments"
+                    onchange={fieldChange}
+                    label="Please provide an entry"
+                    required="true"
+                    value={comments}
+                >
+                </lightning-textarea>
+    
+    
+            </div>
+            <footer class="slds-modal__footer modal-hidden">			 
+                <lightning-button                    
+                    variant="default"					 
+                    label="Submit"
+                    onclick={closeModal}>
+                </lightning-button>	
+            </footer>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>

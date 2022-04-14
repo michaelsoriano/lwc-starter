@@ -1,0 +1,14 @@
+<template>
+    <div class="grid-item card">
+      <h2>{item.title}</h2>
+      <img src={item.image} />
+
+      <lightning-button
+        onclick={showDetail}
+        variant="brand-outline"
+        label="action.."
+        data-itemid={item.id}
+        >
+      </lightning-button>
+    </div>
+</template>

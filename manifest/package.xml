@@ -5,7 +5,12 @@
 		<name>ApexClass</name>
 	</types>
 	<types>
+		<members>lsHelpers</members>
+		<members>lsItemDetail</members>
+		<members>lsItemTile</members>
+		<members>lsLanding</members>
 		<members>lsMain</members>
+		<members>lsModal</members>
 		<name>LightningComponentBundle</name>
 	</types>
 	<types>

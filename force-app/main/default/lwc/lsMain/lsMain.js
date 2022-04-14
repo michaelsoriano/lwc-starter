@@ -1,7 +1,7 @@
 import { LightningElement, wire } from "lwc";
 import LS_Channel from "@salesforce/messageChannel/LS_Channel__c";
 import { subscribe, MessageContext } from "lightning/messageService";
-import { getUrlParams } from "c/cfrHelpers";
+import { getUrlParams, removeUrlParams } from "c/lsHelpers";
 
 export default class LsMain extends LightningElement {
   @wire(MessageContext)
@@ -61,17 +61,14 @@ export default class LsMain extends LightningElement {
   }
 
   viewHandler(view) {
-    switch(view){
-        case 'landing': 
-            // removeUrlParams();
-            this.view.landing = true;
-            this.view.itemDetail = false; 
-        break;
+    switch(view){      
         case 'itemDetail': 
           this.view.landing = false;
           this.view.itemDetail = true; 
-        break;         
+        break;   
+      case 'landing':                
       default:
+        removeUrlParams();
         this.view.landing = true;
         this.view.itemDetail = false;
         break;
