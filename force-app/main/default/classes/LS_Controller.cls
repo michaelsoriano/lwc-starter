@@ -4,7 +4,7 @@ public with sharing class LS_Controller {
     }
     @AuraEnabled
     public static String getItems(){
-        StaticResource sr = [SELECT Id, Name, SystemModStamp, Body FROM StaticResource  WHERE Name = 'CFR_Mock' LIMIT 1];      
+        StaticResource sr = [SELECT Id, Name, SystemModStamp, Body FROM StaticResource  WHERE Name = 'lsMockData' LIMIT 1];      
         return sr.Body.toString();
     }    
     @AuraEnabled
@@ -13,7 +13,7 @@ public with sharing class LS_Controller {
             throw new AuraHandledException('Id is empty');
         }
         String output = '';          
-        String jsonStr = LS_Controller.getItems();   //sr.Body.toString(); 
+        String jsonStr = LS_Controller.getItems(); 
         List<Object> parsedResponse = (List<Object>) JSON.deserializeUntyped(jsonStr);
         for (Object finalObj : parsedResponse) {
             Map<String,Object> tempObjMap = (Map<String,Object>) finalObj;

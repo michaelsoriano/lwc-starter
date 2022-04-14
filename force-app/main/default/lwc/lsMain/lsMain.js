@@ -1,4 +1,6 @@
 import { LightningElement, wire } from "lwc";
+import { loadStyle  } from "lightning/platformResourceLoader";
+import staticResourceCss from "@salesforce/resourceUrl/lsStyles";
 import LS_Channel from "@salesforce/messageChannel/LS_Channel__c";
 import { subscribe, MessageContext } from "lightning/messageService";
 import { getUrlParams, removeUrlParams } from "c/lsHelpers";
@@ -17,6 +19,7 @@ export default class LsMain extends LightningElement {
   };
 
   connectedCallback() {   
+    loadStyle(this, staticResourceCss);
     subscribe(this.messageContext, LS_Channel, (message) => {
       if (message.isLoading === true) {
         this.isLoading = true;

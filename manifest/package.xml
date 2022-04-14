@@ -18,7 +18,8 @@
 		<name>LightningMessageChannel</name>
 	</types>
 	<types>
-		<members>CFR_Mock</members>
+		<members>lsMockData</members>
+		<members>lsStyles</members>
 		<name>StaticResource</name>
 	</types>
 	<version>53.0</version>
