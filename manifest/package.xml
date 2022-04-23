@@ -5,6 +5,18 @@
 		<name>ApexClass</name>
 	</types>
 	<types>
+		<members>LS_Setting__mdt.Value__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>LS_Setting.Environment_Variables</members>
+		<name>CustomMetadata</name>
+	</types>
+	<types>
+		<members>LS_Setting__mdt</members>
+		<name>CustomObject</name>
+	</types>
+	<types>
 		<members>lsHelpers</members>
 		<members>lsItemDetail</members>
 		<members>lsItemTile</members>
